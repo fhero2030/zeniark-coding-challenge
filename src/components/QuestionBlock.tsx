@@ -58,7 +58,7 @@ const QuestionBlock = (props: Props) => {
           onClick={() => {
             checkAnswer("True", correct_answer);
           }}
-          className=" flex justify-evenly items-center text-white bg-correct text-3xl md min-w-[10rem] min-h-[4rem] rounded-lg"
+          className=" flex justify-evenly items-center text-white bg-correct text-xl md:text-3xl min-w-[6rem] min-h-[3rem] md:min-w-[10rem] md:min-h-[4rem] rounded-lg"
         >
           <AiOutlineCheck /> True
         </button>
@@ -66,7 +66,7 @@ const QuestionBlock = (props: Props) => {
           onClick={() => {
             checkAnswer("False", correct_answer);
           }}
-          className=" flex justify-evenly items-center text-white bg-wrong text-3xl md min-w-[10rem] min-h-[4rem] rounded-lg"
+          className="flex justify-evenly items-center text-white bg-wrong text-xl md:text-3xl min-w-[6rem] min-h-[3rem] md:min-w-[10rem] md:min-h-[4rem] rounded-lg"
         >
           <RxCross1 /> False
         </button>
