@@ -38,18 +38,18 @@ const QuestionBlock = (props: Props) => {
     <Container className="flex flex-col items-center py-5">
       {/* Quiz Header */}
       <div className="flex justify-between items-center px-7 w-full mb-4 md:mb-7">
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-2 md:gap-6">
           <Image src={"/images/logo.png"} width={60} height={65} alt="Zeniark Icon Logo" />
-          <p className="font-semibold lg:text-2xl">Category: {category}</p>
+          <p className="font-semibold text-sm lg:text-2xl">Category: {category}</p>
         </div>
 
-        <p className="self-end text-sm md:text-xl font-medium">
+        <p className="self-end text-xs md:text-xl font-medium whitespace-nowrap">
           {currentItem} of {itemLength}
         </p>
       </div>
       {/* Quiz Question */}
-      <div className="py-36 px-16 border-y-2 w-11/12">
-        <h1 className="text-3xl md:text-5xl text-center">{questionLabel}</h1>
+      <div className="py-20 px-8 md:py-36 md:px-16 border-y-2 w-11/12">
+        <h1 className="text-xl md:text-5xl text-center">{questionLabel}</h1>
       </div>
 
       {/* Quiz Buttons */}
