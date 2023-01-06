@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* body {
+  @apply bg-zeniark-bg bg-fixed bg-no-repeat bg-center bg-cover;
+} */
