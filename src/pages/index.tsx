@@ -23,7 +23,7 @@ export default function Home() {
             You will be presented with 10 True or False questions.
           </p>
 
-          <p className="text-2xl text-center text-white px-10 md:px-20 py-4 rounded-2xl bg-primary font-medium">
+          <p className="text-4xl text-center text-white px-10 md:px-20 py-4 rounded-2xl bg-primary font-medium">
             Can you score 10/10?
           </p>
         </div>
