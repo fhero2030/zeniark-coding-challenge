@@ -14,7 +14,9 @@ const Container = <E extends React.ElementType = "div">(props: OwnProps<E>) => {
   const Component = as || "div";
 
   return (
-    <Component className={`${className} bg-white w-[600px] p-7 mx-auto rounded-[10px] my-20`}>
+    <Component
+      className={`${className} bg-white w-11/12 md:w-full max-w-[900px] mx-auto rounded-[10px] my-10 md:my-20`}
+    >
       {children}
     </Component>
   );
