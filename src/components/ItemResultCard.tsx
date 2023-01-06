@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { AiOutlineCheck } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
@@ -14,12 +14,28 @@ const ItemResultCard = (props: Props) => {
 
   const correct = answer.toLowerCase() === correct_answer.toLowerCase();
 
+  const [questionLabel, setQuestionLabel] = useState("");
+
+  // Same function in QuestionBlock.tsx
+  // TODO: Custom hooks
+  useEffect(() => {
+    //https://stackoverflow.com/questions/5796718/html-entity-decode
+    const span = document.createElement("span");
+
+    const newText = question.replace(/&[#A-Za-z0-9]+;/gi, (entity, position, text) => {
+      span.innerHTML = entity;
+      return span.innerText;
+    });
+
+    setQuestionLabel(newText);
+  }, [question]);
+
   return (
     <div className="grid grid-cols-12 w-11/12 py-6 grid-rows-2 border-b-2 border-dashed">
       <p className="col-span-1 text-[#9D9D9D] text-lg">{item}.</p>
 
       <div className="col-span-9 row-span-2 flex flex-col justify-between">
-        <p>{question}</p>
+        <p>{questionLabel}</p>
         <p className="text-[#A5A5A5] italic">
           The correct anwer is{" "}
           <span
